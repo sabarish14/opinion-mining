@@ -57,7 +57,6 @@ for train_index, test_index in kf:
     
     new_predicted=voting(predicted)
     accuracy+= metrics.accuracy_score(test_labels, new_predicted, normalize=True, sample_weight=None)
-    #accuracy1+=find_accuracy(test_labels,new_predicted)
     metric= precision_recall_fscore_support(test_labels, new_predicted)
     precision+=metric[0]
     recall+=metric[1]

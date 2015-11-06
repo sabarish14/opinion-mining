@@ -31,7 +31,6 @@ class MLStripper(HTMLParser):
         return ''.join(self.fed)
 class preprocess:
     featurelist=[] 
-    #start process_tweet
     
     def strip_tags(self,html):
         s = MLStripper()
@@ -40,7 +39,7 @@ class preprocess:
     
    
            
-    
+    #function to extract features
     def extract_features(self,tweet):
         tweet_words = set(tweet)
         features = {}
